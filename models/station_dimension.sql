@@ -3,11 +3,11 @@ WITH bike AS (
 SELECT 
 DISTINCT
 start_statio_id AS start_station_id,
-start_station_name,
-start_lat,
-start_lng
+start_station_name AS station_name,
+start_lat AS station_lat,
+start_lng AS station_lng
 
-FROM {{ source('demo', 'bike') }}
+FROM {{ ref('stg_bike') }}
 )
 SELECT
 *

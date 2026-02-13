@@ -9,7 +9,7 @@ DAYNAME(TO_TIMESTAMP(STARTED_AT)) AS DAY_NAME_STARTED_AT,
 {{get_season ('STARTED_AT') }} AS STATION_OF_YEAR,
 MONTH(TO_TIMESTAMP(STARTED_AT)) AS MONTH_STARTED_AT
 
-FROM {{ source('demo', 'bike') }}  
+FROM {{ ref('stg_bike') }}
 )
 SELECT 
 *
