@@ -30,3 +30,4 @@ QUALIFY ROW_NUMBER() OVER (PARTITION BY daily_weather ORDER BY count(weather) DE
 SELECT
 *
 FROM daily_weather_agg
+
